@@ -1,0 +1,166 @@
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+button {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+header {
+    display:flex;
+    margin:auto;
+    width:80%;
+    align-items:center;
+    height:10vh;
+}
+.logo-container, .nav-links, .cart {
+    display:flex;
+}
+.logo-container {
+    flex:1;
+}
+.logo {
+    font-weight:400;
+    margin:5px;
+}
+nav {
+    flex:2;
+}
+.nav-links {
+    justify-content:space-around;
+    list-style:none;
+
+}
+.nav-link {
+    color:#5f5f79;
+    font-size:18px;
+    text-decoration:none;
+}
+.cart {
+    flex:1;
+    justify-content:flex-end;
+    
+}
+.presentation {
+    display:flex;
+    width:90%;
+    margin:auto;
+    min-height:80vh;
+    align-items:center;
+
+}
+.introduction {
+    flex:1;
+}
+h1 {
+    font-size:44px;
+    font-weight:500px;
+    background:linear-gradient(to right,#494964, #6f6f89);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+}
+.cover {
+    flex:1;
+    display:flex;
+    justify-content:center;
+    height:60vh;
+}
+p {
+    margin-top:5px;
+    font-size:22px;
+    color:#585772;
+}
+
+.cta-select {
+    border:2px solid #c36cbb;
+    background:transparent;
+    width:150px;
+    height:50px;
+    cursor:pointer;
+    font-size:16px;
+    color:#c36cbb;
+    
+    
+}
+.cta-add {
+    background:#c36cbb;
+    width:150px;
+    height:50px;
+    cursor:pointer;
+    font-size:16px;
+    border:none;
+    color:white;
+    margin: 30px 0px 0px 0px;
+    
+}
+.big-circle {
+    position:absolute;
+    top:0px;
+    right:0px;
+    z-index:-1;
+    opacity:0.5;
+    height:90%;
+}
+.mid-circle {
+    position:absolute;
+    top:30%;
+    right:30%;
+    z-index:-1;
+    height:60%;
+    opacity:0.4;
+}
+
+.laptop-select {
+    width:15%;
+    display:flex;
+    justify-content:space-around;
+    position:absolute;
+    right:25%
+}
+@keyframes drop {
+    0% {
+        opacity:0;
+        transform:translateY(-80px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+.laptop {
+    animation:drop 1.5s ease;
+}
+@media screen and (max-width:1024px) {
+    .presentation {
+        flex-direction:column;
+    }
+    .introduction {
+        margin-top:5vh;
+        text-align:center;
+    }
+    h1 {
+        font-size:30px;
+    }
+    p {
+        font-size:18px;
+    }
+    #cta {
+        padding:10px 0px 0px 0px;
+    }
+    .laptop-select {
+        bottom:5%;
+        right:50%;
+        width:50%;
+        transform:translate(50%,5%);
+    }
+    .cover img {
+        height:80%
+    }
+    .mid-circle,.big-circle {
+        opacity:0.2;
+    }
+    
+}
